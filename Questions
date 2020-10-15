@@ -14,4 +14,25 @@ Find target in a given sorted 2d matrix
 	]
 	*
 
-Question 4:
+Question 4: Done using two ways
+1.Check whether given number is power of two
+
+Question 5: Modification required
+"2. Convert a 9-digit number to SI string Constraints:
+ 1. no leading zeroes 
+ 2. number not comma-separated 1469 -> one thousand four hundred sixty nine
+  136,527,890 -> one hundred thirty six million five hundred twenty seven thousand eight hundred ninety 
+input -> long output -> String "
+
+Question 6 :Modification required if Question6 is changing the Array
+Given an array of unsorted integers and a value k.Write a Java program to find the k th minimum element in the array
+(Without changing the array given; should not use sort method)
+
+Question 7 : Similar to Question 6
+Given an array of unsorted integers and a value k.Write a Java program to find the k th minimum element in the array
+(Without changing the array given; should not use sort method)
+
+Question 8 : 
+1. Given a sorted list of integers, square the elements and give the output in sorted order.
+For example, given [-9, -2, 0, 2, 3], return [0, 4, 4, 9, 81].
+
