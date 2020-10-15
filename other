@@ -1,0 +1,65 @@
+Notes For Question 2 :
+1 . Filter null values
+we know that Stream.filer () return a stream consisting of the elements of current stream that match the given predicate .We can use below lambda expresion to filter null values from the stream 
+stream.filter(x -> x != null);
+
+stream.filter(x -> Objects.nonNull(x));
+
+we can also filter out the null values from the stream using static nonNull() method provided by Java.util.Objects .It returns true if the provided refrence is non null otherwise return false .There are two ways to call it 
+1 : Using Lambda expression 
+stream.filter(x -> Objects.nonNull(x));
+
+2 : Using method reference (recommended)
+
+import java.util.Arrays;
+import java.util.Objects;
+import java.util.stream.Collectors;
+
+class Main
+{
+	// Program to filter null values from stream in Java 8 and above
+	public static void main(String[] args)
+	{
+		String[] cities = { "NYC", "Washington D.C.", null, "Mexico",
+						   "Fargo", null, "Beijing", "New Delhi", "Tokyo" };
+
+		Arrays.asList(cities).stream()
+				.filter(Objects::nonNull)
+				.forEach(System.out::println);
+	}
+}
+
+2 Map the null values to default value
+Instead of filtering out null values from the stream completely we can replace them with something In below example 
+we are replacing null values with an empty string
+
+import java.util.Arrays;
+import java.util.Objects;
+import java.util.stream.Collectors;
+
+class Main
+{
+	// Program to replace null values from stream in Java 8 and above
+	public static void main(String[] args)
+	{
+		String[] cities = { "NYC", "Washington D.C.", null, "Mexico",
+						   "Fargo", null, "Beijing", "New Delhi", "Tokyo" };
+
+		Arrays.asList(cities)
+				.stream()
+				.map(city -> (city == null ? "" : city))
+				.forEach(System.out::println);
+	}
+}
+
+
+Note Question 3
+// converting each row as string 
+            // and then printing in a separate line 
+            //System.out.println(Arrays.toString(row));
+
+
+Note Question 4:
+For first Method 
+Using Math.floor and Math.ceil functions 
+1. A simple method for this is to simply take the log of the number on base 2 and if you get an integer then number is power of 2. 

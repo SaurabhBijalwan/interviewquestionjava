@@ -1,5 +1,17 @@
 Question 1 : Program to convert a given number(Long) to words with test-cases.  Done
-Question 2 :"Find the first non-duplicate character in a string. Return null if no unique character is found.
+Question 2 :"Find the first non-duplicate character in a string. Return null if no unique character is found. : Done Need Improvement
     firstNonRepeatedCharacter( ""abcdcd"" ) --> 'a'
     firstNonRepeatedCharacter( ""cbcd"" ) --> 'b'
     firstNonRepeatedCharacter( ""cdcd"" ) --> null"
+Question 3:Find target number in a given MXN sorted 2d matrix/////
+ 
+/*
+Find target in a given sorted 2d matrix
+	[
+	[2, 4, 5, 10],
+	[12, 13, 14, 15]
+	[20, 25, 50, 51]
+	]
+	*
+
+Question 4:
