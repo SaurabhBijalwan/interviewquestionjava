@@ -1,0 +1,5 @@
+Question 1 : Program to convert a given number(Long) to words with test-cases.  Done
+Question 2 :"Find the first non-duplicate character in a string. Return null if no unique character is found.
+    firstNonRepeatedCharacter( ""abcdcd"" ) --> 'a'
+    firstNonRepeatedCharacter( ""cbcd"" ) --> 'b'
+    firstNonRepeatedCharacter( ""cdcd"" ) --> null"
