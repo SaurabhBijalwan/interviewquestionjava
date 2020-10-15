@@ -37,4 +37,4 @@ class Question4AnotherWay {
 	}
 }
 
-// This code is contributed by Nikita tiwari.
+

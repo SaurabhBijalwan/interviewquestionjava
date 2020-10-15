@@ -1,7 +1,11 @@
 /* Java program to print a given number in words. 
 The program handles till 9 digits numbers and 
 can be easily extended to 20 digit number */
-class GFG { 
+
+import java.util.*;
+import java.util.function.*;
+import java.util.stream.Collectors;
+class Question5 { 
 
 	// Strings at index 0 is not used, it is to make array 
 	// indexing simple 
@@ -18,13 +22,18 @@ class GFG {
 							"fifty ", "sixty ", "seventy ", "eighty ", 
 							"ninety " }; 
 
+// for hundered
+	static String hundred[] = { "", "", "","two hundered ", "three hundered ", "four hundered ", 
+							"five hundred ", "six hundred ", "seven hundred ", "eight hundred ", 
+							"nine hundred " }; 
+
 	// n is 1- or 2-digit number 
 	static String numToWords(int n, String s) 
 	{ 
 		String str = ""; 
 		// if n is more than 19, divide it 
 		if (n > 19) { 
-			str += ten[n / 10] + one[n % 10]; 
+			str += hundred[n/100]+ten[n / 10] + one[n % 10]; 
 		} 
 		else { 
 			str += one[n]; 
@@ -45,19 +54,16 @@ class GFG {
 		String out = ""; 
 
 
-//
 
-// handles digits at ten millions and hundred 
-		// millions places (if any) 
-		out += numToWords((int)(n / 100000000), "kharab "); 
+	
 
 
 
-//
+
 
 		// handles digits at ten millions and hundred 
 		// millions places (if any) 
-		out += numToWords((int)(n / 10000000), "crore "); 
+		out += numToWords((int)((n / 10000000) % 1000), "crore "); 
 
 		// handles digits at hundred thousands and one 
 		// millions places (if any) 
@@ -73,21 +79,28 @@ class GFG {
 		if (n > 100 && n % 100 > 0) { 
 			out += "and "; 
 		} 
+        
 
 		// handles digits at ones and tens places (if any) 
 		out += numToWords((int)(n % 100), ""); 
-
 		return out; 
 	} 
 
 	// Driver code 
 	public static void main(String[] args) 
 	{ 
+System.out.println("  Please  enter  the  input  string  :");
+    Scanner in = new Scanner(System.in); // read from System input
+    String input = in.nextLine();
+
+    long n = Integer.parseInt(input);
+
 		// long handles upto 9 digit no 
 		// change to unsigned long long int to 
 		// handle more digit number 
 		//long n = 438237764; 
-long n = 199999999; 
+
+//long n = 199999999; 
 
 		// convert given number in words 
 		System.out.printf(convertToWords(n)); 
