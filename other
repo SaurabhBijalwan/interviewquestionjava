@@ -96,3 +96,15 @@ class MentionNotUseArraySortMethod {
 } 
 
 // Not Sure using Quick sort we are changing the array or not
+
+
+Note Question 8:
+Time complexity: O(n)
+space complexity: O(n) 
+Efficient solution is based on the fact that given array is already sorted. We do following two steps.
+
+    Divide the array into two part “Negative and positive “.
+    Use merge function to merge two sorted arrays into a single sorted array
+
+Question8NLogN:
+    Time complexity: O(n log n)

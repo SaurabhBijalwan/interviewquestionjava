@@ -1,0 +1,152 @@
+public class Question9 {
+
+public static void main(String args[]){
+
+    System.out.println("Question9");
+
+    int matrix[][] = { { 2, 4, 5, 10 }, 
+						{ 12, 13, 14, 15 }, 
+						{ 20, 25, 50, 51 } }; 
+		int K = 3; 
+		if (searchMatrix(matrix, K)) { 
+			System.out.println(K +" :"+" is Found in matrix =>" + print2D(matrix)); 
+		} 
+		else { 
+			System.out.println("Not found"); 
+		} 
+}
+
+
+}
+public class BinarySearch2D { 
+    public static boolean searchMatrix(int[][] matrix, int target) 
+    { 
+        //add code here
+        //Find target in a given sorted 2d matrix [ [2, 4, 5, 10], [12, 13, 14, 15] [20, 25, 50, 51] ] 
+    
+ 
+		int low = 0; 
+		int high = N - 1; 
+		while (low <= high) { 
+			int mid = low + (high - low) / 2; 
+
+			// if element found return true 
+			if (matrix[mid] == K) { 
+				return true; 
+			} 
+
+			// if middle less than K then 
+			// skip the left part of the 
+			// array else skip the right part 
+			if (matrix[mid] < K) { 
+				low = mid + 1; 
+			} 
+			else { 
+				high = mid - 1; 
+			} 
+		} 
+
+		// if not found return false 
+		return false; 
+	
+     } 
+}
+
+import java.io.*; 
+import java.util.*; 
+
+public class Question3 { 
+
+	static final int M = 3; 
+	static final int N = 4; 
+
+	// Basic binary search to 
+	// find an element in a 1-D array 
+	static boolean binarySearch1D(int arr[], int K) 
+	{ 
+		int low = 0; 
+		int high = N - 1; 
+		while (low <= high) { 
+			int mid = low + (high - low) / 2; 
+
+			// if element found return true 
+			if (arr[mid] == K) { 
+				return true; 
+			} 
+
+			// if middle less than K then 
+			// skip the left part of the 
+			// array else skip the right part 
+			if (arr[mid] < K) { 
+				low = mid + 1; 
+			} 
+			else { 
+				high = mid - 1; 
+			} 
+		} 
+
+		// if not found return false 
+		return false; 
+	} 
+
+	// Function to search an element 
+	// in a matrix based on 
+	// Divide and conquer approach 
+	static boolean searchMatrix(int matrix[][], int K) 
+	{ 
+		int low = 0; 
+		int high = M - 1; 
+		while (low <= high) { 
+			int mid = low + (high - low) / 2; 
+
+			// if the element lies in the range 
+			// of this row then call 
+			// 1-D binary search on this row 
+			if (K >= matrix[mid][0] 
+				&& K <= matrix[mid][N - 1]) { 
+				return binarySearch1D(matrix[mid], K); 
+			} 
+
+			// if the element is less then the 
+			// starting element of that row then 
+			// search in upper rows else search 
+			// in the lower rows 
+			if (K < matrix[mid][0]) { 
+				high = mid - 1; 
+			} 
+			else { 
+				low = mid + 1; 
+			} 
+		} 
+
+		// if not found 
+		return false; 
+	} 
+
+	// Driver code 
+	public static void main(String args[]) 
+	{ 
+		int matrix[][] = { { 1, 3, 5, 7 }, 
+						{ 10, 11, 16, 20 }, 
+						{ 23, 30, 34, 50 } }; 
+		int K = 3; 
+		if (searchMatrix(matrix, K)) { 
+			System.out.println(K +" :"+" is Found in matrix =>" + print2D(matrix)); 
+		} 
+		else { 
+			System.out.println("Not found"); 
+		} 
+	} 
+    public static String print2D(int mat[][]) 
+    {  String matrix="";
+        // Loop through all rows 
+        for (int[] row : mat) 
+  
+            // converting each row as string 
+            // and then printing in a separate line 
+            //System.out.println(Arrays.toString(row)); 
+            matrix +=Arrays.toString(row)+" ";
+         return matrix;
+    } 
+       
+} 

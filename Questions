@@ -36,3 +36,149 @@ Question 8 :
 1. Given a sorted list of integers, square the elements and give the output in sorted order.
 For example, given [-9, -2, 0, 2, 3], return [0, 4, 4, 9, 81].
 
+Question 9 : Not Done feeling same as Question 3 code is not running
+2. Find target number in a given MXN sorted 2d matrix/*
+Find target in a given sorted 2d matrix [ [2, 4, 5, 10], [12, 13, 14, 15] [20, 25, 50, 51] ] 
+*/ public class BinarySearch2D { public static boolean searchMatrix(int[][] matrix, int target) { //add code here } }
+
+Question 10 : Simple stack created let check it is as per question or not
+"3. 
+BumperStack(int maxSize) : Initializes the object with maxSize which is the maximum number of elements in the stack or do nothing if the stack reached the maxSize.
+  void push(int x) Adds x to the top of the stack if the stack hasn’t reached the maxSize.
+  int pop() Pops and returns the top of stack or -1 if the stack is empty.
+  void inc(int k, int val) Increments the bottom k elements of the stack by val. If there are less than k elements in the stack, just increment all the elements in the stack.
+
+Input
+[""bumperStack"",""push"",""push"",""pop"",""push"",""push"",""push"",""increment"",""increment"",""pop"",""pop"",""pop"",""pop""]
+[[3],[1],[2],[],[2],[3],[4],[5,100],[2,100],[],[],[],[]]
+Output
+[null,null,null,2,null,null,null,null,null,103,202,201,-1]
+Explanation
+bumperStack bumperStack = new bumperStack(3); // Stack is Empty []
+bumperStack.push(1);                          // stack becomes [1]
+bumperStack.push(2);                          // stack becomes [1, 2]
+bumperStack.pop();                            // return 2 --> Return top of the stack 2, stack becomes [1]
+bumperStack.push(2);                          // stack becomes [1, 2]
+bumperStack.push(3);                          // stack becomes [1, 2, 3]
+bumperStack.push(4);                          // stack still [1, 2, 3], Don't add another elements as size is 4
+bumperStack.increment(5, 100);                // stack becomes [101, 102, 103]
+bumperStack.increment(2, 100);                // stack becomes [201, 202, 103]
+bumperStack.pop();                            // return 103 --> Return top of the stack 103, stack becomes [201, 202]
+bumperStack.pop();                            // return 202 --> Return top of the stack 102, stack becomes [201]
+bumperStack.pop();                            // return 201 --> Return top of the stack 101, stack becomes []
+bumperStack.pop();                            // return -1 --> Stack is empty return -1."
+
+Question 11: Done
+"1.two linked lists->
+
+1->2->6-7 & 3->4->5->8
+
+output should be a merged linked list but should be sorted one itself.
+
+o/p=>1-2-3-4-5-6-7-8"
+
+Question 12 : Not Done
+"2.Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+
+You may assume no duplicates in the array.
+
+Example 1:
+Input: [1,3,5,6], 5
+Output: 2
+
+Example 2:
+Input: [1,3,5,6], 2
+Output: 1"
+
+Question 13 : Not Done
+"1) Given 2 linkedlist of intergers.Reverse values in each linked list
+    Take the sum of the two reversed integers.
+    Result should be reversed and stored in a different linkedlist
+    2 -> 4 -> 3 = 342
+    5 -> 6 -> 4 = 465
+    807
+    7 -> 0 -> 8"
+
+Question 14 : Not Done
+Check whether the given number is power of 2.
+
+Question 15 :Not Done
+"1) Given a string with repeated characters, rearrange the string so that no two adjacent characters are the same. If this is not possible, return None.
+For example, given “aaabbc”, you could return “ababac”. Given “aaab”, return None"
+
+Question 16 : Not Done
+"3) Linked List 1 : 1->4->5->8
+     Linked List 2 : 2->3->6->9
+     Merge the two linked lists to get a resultant sorted Linked List 1->2->3->4->5->6->8->9"
+
+Question 17 :Not Done
+2) How is deleting an element in array different from Linked List.
+
+
+Question 18 : Not Done
+") Stacks
+    
+ BumperStack(int maxSize) Initializes the object with maxSize which is the maximum number of elements in the stack or do nothing if the stack reached the maxSize.
+  void push(int x) Adds x to the top of the stack if the stack hasn’t reached the maxSize.
+  int pop() Pops and returns the top of stack or -1 if the stack is empty.
+  void inc(int k, int val) Increments the bottom k elements of the stack by val. If there are less than k elements in the stack, just increment all the elements in the stack.
+
+ Explain the operation.
+ stack elements for example reference  [1 4 5 6 8 9 10 11] and inc(3,50)"
+
+ Question 19 : Not Done
+ "5) Spreadsheets often use this alphabetical encoding for its columns: “A”, “B”, “C”, ..., “AA”, “AB”, ..., “ZZ”, “AAA”, “AAB”, .... 
+Given a column number, return its alphabetical column id. For example, given 1, return “A”. Given 27, return “AA”.
+
+1-A, 2-B,.....53-AA,54-AB,........677- AAA, 678 -AAB
+
+Logic to get Column name based on ColumnNumber."
+
+Qustion 20: Not Done
+"1.	 BinarySearch on array {10,12,14,23,67}
+"
+2.  Find the peak element in array {10,12,14,23,67,52,13,8,1} using binary search technique
+
+Question 21 :Not Done
+"1)Given a string s of lowercase letters, we need to remove consecutive vowels from the string
+ 
+Note : Sentence should not contain two consecutive vowels ( a, e, i, o, u).
+ 
+Examples :
+ 
+Input: geeks for geeks
+Output: geks for geks
+ 
+Input : your article is in queue 
+Output : yor article is in qu"
+
+
+Question 22 :Not Done
+"2)Given a sorted list of integers, square the elements and give the output in sorted order and dont use in built sort functions.
+For example, given [-9, -2, 0, 2, 3], return [0, 4, 4, 9, 81]. "
+
+"3)
+Given array nums = [-1, 0, 1, 2, -1, -4],
+find a,b,c such that a+b+c =0
+[-1, 0, 1],
+[-1, -1, 2]
+"
+
+Question:22
+Friend circle group alogorithm-Leetcode#547 :https://leetcode.com/problems/friend-circles/
+1)Write a function  that checks whether a given Linked List contains loop and if loop is present then returns count of nodes in loop. For example, loop is present in linked list it should return length, If loop is not present, then function should return 0.
+2)Given a n x n matrix. The problem is to sort the given matrix in strict order. Here strict order means that matrix is sorted in a way such that all elements in a row are sorted in increasing order and for row ‘i’, where 1 <= i <= n-1, first element of row 'i' is greater than or equal to the last element of row 'i-1'.
+"3)intersection of two sorted linked list.
+first linked list:1->2->3->4->6
+second linked list:2->4->6->8
+output:2->4->6."
+1. Different betw Hash map and concurrent hash map. 
+2. How do you synchonize hash map.
+3. There are 2 linked list , merge the 2 lists and sort them
+4. What the use of comparable and comparator
+5. Jpa Flow
+
+
+
+
+
