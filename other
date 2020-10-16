@@ -157,3 +157,14 @@ class ConcurrentHashMapDemo
 Exception in thread "main" java.lang.NullPointerException
 
 HashMap is introduced in JDK 1.2 whereas ConcurrentHashMap is introduced by SUN Microsystem in JDK 1.5.
+
+Question 22 Part 2:
+HashMap is a non-synchronized collection class. If we need to perform thread-safe operations on it then we must need to synchronize it explicitly. 
+Example:
+In this example we have a HashMap<Integer, String> it is having integer keys and String type values.
+In order to synchronize it we are using 
+
+Collections.synchronizedMap(hashmap)  it returns a thread-safe map backed up by the specified HashMap.
+
+Important point to note in the below example:
+Iterator should be used in a synchronized block even if we have synchronized the HashMap explicitly (As we did in the below code).
